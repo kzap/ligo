@@ -26,7 +26,10 @@ func main() {
 	}
 
 	linodeClient := linodego.NewClient(oauth2Client)
-	linodeClient.SetDebug(true)
+
+	if _, ok := os.LookupEnv("LINODE_DEBUG"); ok {
+		linodeClient.SetDebug(true)
+	}
 
 	res, err := linodeClient.GetInstance(context.Background(), 4090913)
 	if err != nil {
