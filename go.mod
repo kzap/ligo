@@ -5,6 +5,7 @@ require (
 	github.com/dnaeon/go-vcr v0.0.0-20180920040454-5637cf3d8a31 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/linode/linodego v0.5.2-0.20180916222121-15d4ab6c221b
+	github.com/mitchellh/go-homedir v1.0.0
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/spf13/cobra v0.0.3
 	github.com/spf13/viper v1.2.1
