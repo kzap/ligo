@@ -1,4 +1,5 @@
-package main
+// Package client initializes the Linode Client and provides related helpers.
+package ligo
 
 import (
 	"context"
@@ -12,7 +13,8 @@ import (
 	"os"
 )
 
-func main() {
+// NewClient creates a new Linode Client using the given LINODE_TOKEN
+func NewClient() {
 	apiKey, ok := os.LookupEnv("LINODE_TOKEN")
 	if !ok {
 		log.Fatal("Could not find LINODE_TOKEN, please assert it is set.")
@@ -26,7 +28,10 @@ func main() {
 	}
 
 	linodeClient := linodego.NewClient(oauth2Client)
-	linodeClient.SetDebug(true)
+
+	if _, ok := os.LookupEnv("LINODE_DEBUG"); ok {
+		linodeClient.SetDebug(true)
+	}
 
 	res, err := linodeClient.GetInstance(context.Background(), 4090913)
 	if err != nil {
