@@ -37,7 +37,7 @@ var rootCmd = &cobra.Command{
 	Short: "Linode CLI tools written in GOLANG",
 	Long: `Linode CLI tools written in GOLANG
 
-Example:
+Examples:
 
 - ligo linodes list
 - ligo linodes view server-name`,
