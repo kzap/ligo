@@ -1,5 +1,5 @@
 // Package client initializes the Linode Client and provides related helpers.
-package client
+package ligo
 
 import (
 	"context"

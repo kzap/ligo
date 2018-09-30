@@ -15,7 +15,7 @@
 package main
 
 import (
-	"github.com/kzap/ligo/cmd"
+	"github.com/kzap/ligo/cmd/ligo/cmd"
 )
 
 func main() {
